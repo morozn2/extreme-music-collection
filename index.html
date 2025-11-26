@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>My album collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="/img/compact-disc-svgrepo-com.svg" alt="Logo" class="cd">
+                <a class="navbar-brand logo" href="index.html">MusiCollection</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle header-font" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Диски
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark header-font">
+                                <li><a class="dropdown-item" href="all-cds-page-one.html">Всі диски</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Black Metal</a></li>
+                                <li><a class="dropdown-item" href="#">Death Metal</a></li>
+                                <li><a class="dropdown-item" href="#">Post-Punk</a></li>
+                                <li><a class="dropdown-item" href="#">Power Electronics</a></li>
+                            </ul>
+                        </li>
+                        <hr class="header-line">
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle header-font" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Касети
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark header-font">
+                                <li><a class="dropdown-item" href="all-tapes-page-one.html">Всі касети</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="black-metal-tapes.html">Black Metal</a></li>
+                                <li><a class="dropdown-item" href="thrash-metal-tapes.html">Thrash Metal</a></li>
+                                <li><a class="dropdown-item" href="dungeon-synth-tapes.html">Dungeon Synth</a></li>
+                            </ul>
+                        </li>
+                        <hr class="header-line">
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle header-font" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Платівки
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark header-font">
+                                <li><a class="dropdown-item" href="#">Всі платівки</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Black Metal</a></li>
+                                <li><a class="dropdown-item" href="#">Death Metal</a></li>
+                                <li><a class="dropdown-item" href="#">Dungeon Synth</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Пошук..." aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Пошук</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner carousel-color">
+                <div class="carousel-item active d-flex justify-content-center gap-5 align-items-center">
+                    <img src="/img/gold-black-lp.jpg" class="d-block w-50" alt="...">
+                    <div class="d-flex flex-column">
+                        <h1 class="headers">Vinyl</h1>
+                        <p class="white-text">Альбом на фото:</p>
+                        <a href="https://molochukr.bandcamp.com/album/the-forest-kingdom?search_item_id%3D2336853425%26search_item_type%3Da%26search_match_part%3D%253F%26search_page_id%3D4866872803%26search_page_no%3D0%26search_rank%3D1="
+                            target="_blank">Moloch
+                            - The Forest Kingdom</a>
+                    </div>
+                </div>
+                <div class="carousel-item d-flex justify-content-center gap-5 align-items-center">
+                    <img src="/img/tapes.jpg" class="d-block w-50" alt="...">
+                    <div class="d-flex flex-column">
+                        <h1 class="headers">Tapes</h1>
+                        <p class="white-text">Альбоми на фото (зверху вниз):</p>
+                        <a href="https://www.youtube.com/watch?v=WhlnKhflvtQ&pp=ygUb0LvRjtGC0L7QvNGL0YHQuyDQstGL0LfQvtCy"
+                            target="_blank">Лютомысл - Вызов</a>
+                        <a href="https://www.youtube.com/watch?v=AeISq9jl87o&t=1s&pp=ygUdbm9rdHVybmFsIG1vcnR1bSB0byB0aGUgZ2F0ZXM%3D"
+                            target="_blank">Nokturnal
+                            Mortum - To the Gates of the<br>Blasphemous Fire</a>
+                    </div>
+                </div>
+                <div class="carousel-item d-flex justify-content-center gap-5 align-items-center">
+                    <img src="/img/cds.jpg" class="d-block w-50" alt="...">
+                    <div class="d-flex flex-column">
+                        <h1 class="headers">CD</h1>
+                        <p class="white-text">Альбоми на фото (зліва направо, зверху вниз):</p>
+                        <a href="https://www.youtube.com/watch?v=cIy4Ve8YEh8&pp=ygUgdmFtcGlyZXMgb2YgYmxhY2sgaW1wZXJpYWwgYmxvb2Q%3D"
+                            target="_blank">Mütiilation - Vampies of Black Imperial<br>Blood</a>
+                        <a href="">Moloch - Depressive Black Metal Plague</a>
+                        <a href="">Atrax Morgue - Disconnected</a>
+                        <a href="https://cannibalcorpse.bandcamp.com/album/kill?search_item_id%3D2420835716%26search_item_type%3Da%26search_match_part%3D%253F%26search_page_id%3D4866891384%26search_page_no%3D0%26search_rank%3D4="
+                            target="_blank">Cannibal Corpse - Kill</a>
+                        <a href="https://www.youtube.com/watch?v=h-mTBMOzT-A&pp=ygUTaW50byBmcm9zdHkgbWFkbmVzcw%3D%3D"
+                            target="_blank">Vlad Tepes - Into Frosty Madness</a>
+                        <a href="https://osmoseproductions.bandcamp.com/album/erotik?search_item_id%3D4194521212%26search_item_type%3Da%26search_match_part%3D%253F%26search_page_id%3D4866896458%26search_page_no%3D0%26search_rank%3D1="
+                            target="_blank">Lifelover - Erotik</a>
+                        <a href="https://www.youtube.com/watch?v=P5WhhuoG1Po&t=6s&pp=ygUHeWdnIHlnZw%3D%3D"
+                            target="_blank">YGG - YGG</a>
+                        <a href="https://nocturnaldepression.bandcamp.com/album/four-seasons-to-a-depression"
+                            target="_blank">Nocturnal Depression - Four Seasons to<br>a Depression</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="homepage-content">
+            <div class="homepage-text">
+                <h1 class="headers">Музика на фізичних носіях</h1>
+                <p>Ласкаво просимо на сайт, присвячений моїй (поки що)
+                    скромній колекції. Мало хто зараз платить гроші за музику, і тим паче за аналогові носії, тому у вас
+                    могли виникнути деякі питання. Справа я постаралася відповісти на найчастіші з них</p>
+            </div>
+            <div class="accordion accordion-settings" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Але ж є Spotify, там все безкоштовне!
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body accordion-font">
+                            Spotify-то є, та і не тільки він, а й весь Інтернет, і я теж слухаю 98% музики з ютуб або
+                            bandcamp, бо
+                            груп багато, а на
+                            всі альбоми грошей не напасешся. Проте
+                            стрімінгові сервіси платять музикантам буквально
+                            копійки, та й звук, як на мене, поганий, особливо після прослуховування якогось альбому на
+                            диску. Тому я
+                            вирішила обрати якість та грошову підтримку
+                            виконавців на користь доступності. Звук з cd ні з чим не зрівняти, тільки що з платівкою,
+                            але в мене їх небагато.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Хто взагалі зараз купує касети і нащо?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body accordion-font">
+                            Або люди з СРСР під впливом ностальгії, або такі диваки як я :D. Не дивуйтесь, а то я
+                            взагалі
+                            дискети в продажу бачила. А причина - душевність
+                            звуку. Нестача високох
+                            частот магічно впливає на нього. І black metal звучить ще сиріше, ніж на цифрі, що дуже
+                            гарно. Якщо чесно, то з всіх десяти касет, що в мене є, тільки одна нормально звучить в
+                            навушниках. Але мені все одно подобається, навіть якщо я вимушена слухати без них.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Як це можна слухати? Вони ж в піснях демонів викликають!!!
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body accordion-font">
+                            Різні є люди, але це заїзджений стереотип. Всі "сатаністи", с якими випала нагода
+                            поспілкуватися, виявилися дуже хорошими людьми. Один навіть подарував мені три своїх
+                            альбоми.<br>Це все образ. Часто вони адекватніші за моїх однолітків. А до музики звикаєш,
+                            правда. У
+                            всіх спочатку голова болить, але потім втягуєшся. І, як співала одна норвезька група, "Nar
+                            helvete engang kaller er det ingen vei tilbake" - "Коли пекло одного разу покличе, дороги
+                            назад нема". Влучно!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

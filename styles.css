@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: EB Garamond;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-font {
+    font-family: EB Garamond;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header a {
+    color: rgb(185, 222, 255);
+}
+
+header a:hover {
+    color: rgb(214, 250, 255);
+    text-shadow: 1px 1px 2px rgb(255, 0, 0);
+}
+
+.header-line {
+    width: 23px;
+    height: 4px;
+    rotate: 90deg;
+    border-color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+.cd {
+    width: 3%;
+    margin-right: 15px;
+}
+
+.cd:hover {
+    width: 4%;
+}
+
+.logo:hover {
+    font-size: x-large;
+    text-shadow: 1px 1px 2px rgb(0, 234, 255);
+}
+
+body {
+    font-family: EB Garamond;
+}
+
+section {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+section a {
+    text-decoration: none;
+    color: rgb(151, 73, 172);
+}
+
+section a:hover {
+    color: rgb(103, 221, 251);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+.section-line {
+    rotate: 90deg;
+    width: 50px;
+}
+
+.carousel-color {
+    background-color: rgb(0, 0, 0);
+}
+
+.white-text {
+    color: white;
+}
+
+.headers {
+    color: brown;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.homepage-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.homepage-text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 36%;
+}
+
+.accordion-settings {
+    width: 50%;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.accordion-font {
+    font-size: large;
+    font-weight: 500;
+}
+
+.formats-top-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-settings {
+    width: 20%;
+    margin-left: 2%;
+}
+
+.bought-wishlist {
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+    margin-top: 15px;
+}
+
+
+.album-page-outer-container {
+    display: flex;
+    flex-direction: row;    
+}
+
+.album-outer-container {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+    margin-left: auto;
+    margin-bottom: 3%;
+}
+
+.album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(99, 99, 99);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    height: 500px;
+    width: 24%;
+}
+
+.album-card-header {
+    color: white;
+    margin-top: 5px;
+}
+
+.album-card-header:hover {
+    color: rgb(185, 241, 254);
+    text-shadow: 1px 1px 2px rgb(255, 0, 0);
+}
+
+.album-card-font {
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    margin-bottom: 0rem;
+}
+
+.album-card-line {
+    width: 80%;
+    margin-top: 0rem;
+    margin-bottom: 8px;
+    border-color: aliceblue;
+}
+
+.album-images {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.list-text {
+    font-size: large;
+}
+
+.list-text:hover {
+    color: rgb(81, 81, 81);
+    text-shadow: 1px 1px 2px rgb(117, 225, 255);
+}
