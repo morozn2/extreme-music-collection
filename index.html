@@ -19,69 +19,13 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <img src="/img/compact-disc-svgrepo-com.svg" alt="Logo" class="cd">
-                <a class="navbar-brand logo" href="index.html">MusiCollection</a>
+                <button onclick="toggleBurgerMenu()" class="burger-symbol">☰</button>
+                <a class="navbar-brand logo" href="index.html" style="margin-right: -150px;">MusiCollection</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-dark dropdown-toggle header-font" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Диски
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-dark header-font">
-                                <li><a class="dropdown-item" href="all-cds-page-one.html">Всі диски</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Black Metal</a></li>
-                                <li><a class="dropdown-item" href="#">Death Metal</a></li>
-                                <li><a class="dropdown-item" href="#">Post-Punk</a></li>
-                                <li><a class="dropdown-item" href="#">Power Electronics</a></li>
-                            </ul>
-                        </li>
-                        <hr class="header-line">
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-dark dropdown-toggle header-font" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Касети
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-dark header-font">
-                                <li><a class="dropdown-item" href="all-tapes-page-one.html">Всі касети</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="black-metal-tapes.html">Black Metal</a></li>
-                                <li><a class="dropdown-item" href="thrash-metal-tapes.html">Thrash Metal</a></li>
-                                <li><a class="dropdown-item" href="dungeon-synth-tapes.html">Dungeon Synth</a></li>
-                            </ul>
-                        </li>
-                        <hr class="header-line">
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <button class="btn btn-dark dropdown-toggle header-font" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Платівки
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-dark header-font">
-                                <li><a class="dropdown-item" href="#">Всі платівки</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Black Metal</a></li>
-                                <li><a class="dropdown-item" href="#">Death Metal</a></li>
-                                <li><a class="dropdown-item" href="#">Dungeon Synth</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Пошук..." aria-label="Search" />
                     <button class="btn btn-outline-success" type="submit">Пошук</button>
@@ -91,6 +35,60 @@
     </header>
 
     <section>
+        <div class="burgerMenu burgerMenuHidden" id="burgerMenu">
+            <div class="burgerMenuButtonContainer">
+                <div class="formatsMenu">
+                    <a href="all-cds-page-one.html">
+                        <p class="formatsMenuParagraph">Диски</p>
+                    </a>
+                    <button type="button" onclick="toggleCD()" id="arrowcd" class="burgerMenuMainButtons">↓</button>
+                </div>
+                <div id="cd-genres" class="genres formatHidden">
+                    <a href="black-metal-cds-page-one.html" class="genre"><button
+                            class="burgerMenuSecondaryButtons">Black Metal</button></a>
+                    <a href="death-metal-cds.html" class="genre"><button class="burgerMenuSecondaryButtons">Death
+                            Metal</button></a>
+                    <a href="post-punk-cds.html" class="genre"><button
+                            class="burgerMenuSecondaryButtons">Post-Punk</button></a>
+                    <a href="noise-n-indus-cds.html" class="genre"><button class="burgerMenuSecondaryButtons">Noise &
+                            Industrial</button></a>
+                </div>
+            </div>
+            <div class="burgerMenuButtonContainer">
+                <div class="formatsMenu">
+                    <a href="all-tapes-page-one.html">
+                        <p>Касети</p>
+                    </a>
+                    <button onclick="toggleCS()" class="burgerMenuMainButtons" id="arrowcs">↓</button>
+                </div>
+                <div id="cs-genres" class="genres formatHidden">
+                    <a href="black-metal-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Black
+                            Metal</button></a>
+                    <a href="thrash-metal-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Thrash
+                            Metal</button></a>
+                    <a href="dungeon-synth-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Dungeon
+                            Synth</button></a>
+                </div>
+            </div>
+            <div class="burgerMenuButtonContainer">
+                <div class="formatsMenu">
+                    <a href="all-vinyl.html">
+                        <p>Платівки</p>
+                    </a>
+                    <button onclick="toggleLP()" class="burgerMenuMainButtons" id="arrowlp">↓</button>
+                </div>
+                <div id="lp-genres" class="genres formatHidden">
+                    <a href="black-metal-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Black
+                            Metal</button></a>
+                    <a href="death-metal-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Death
+                            Metal</button></a>
+                    <a href="dungeon-synth-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Dungeon
+                            Synth</button></a>
+                    <a href="noise-n-indus-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Noise &
+                            Industrial</button></a>
+                </div>
+            </div>
+        </div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade">
             <div class="carousel-inner carousel-color">
                 <div class="carousel-item active d-flex justify-content-center gap-5 align-items-center">
@@ -112,7 +110,7 @@
                             target="_blank">Лютомысл - Вызов</a>
                         <a href="https://www.youtube.com/watch?v=AeISq9jl87o&t=1s&pp=ygUdbm9rdHVybmFsIG1vcnR1bSB0byB0aGUgZ2F0ZXM%3D"
                             target="_blank">Nokturnal
-                            Mortum - To the Gates of the<br>Blasphemous Fire</a>
+                            Mortum - To the Gates of<br>Blasphemous Fire</a>
                     </div>
                 </div>
                 <div class="carousel-item d-flex justify-content-center gap-5 align-items-center">
@@ -194,7 +192,7 @@
                             дискети в продажу бачила. А причина - душевність
                             звуку. Нестача високох
                             частот магічно впливає на нього. І black metal звучить ще сиріше, ніж на цифрі, що дуже
-                            гарно. Якщо чесно, то з всіх десяти касет, що в мене є, тільки одна нормально звучить в
+                            гарно. Якщо чесно, то з всіх одинадцяти касет, що в мене є, тільки одна нормально звучить в
                             навушниках. Але мені все одно подобається, навіть якщо я вимушена слухати без них.
                         </div>
                     </div>
@@ -211,9 +209,17 @@
                         <div class="accordion-body accordion-font">
                             Різні є люди, але це заїзджений стереотип. Всі "сатаністи", с якими випала нагода
                             поспілкуватися, виявилися дуже хорошими людьми. Один навіть подарував мені три своїх
-                            альбоми.<br>Це все образ. Часто вони адекватніші за моїх однолітків. А до музики звикаєш,
+                            альбоми. Це все образ. Часто вони адекватніші за моїх однолітків.<br> А до музики звикаєш,
                             правда. У
-                            всіх спочатку голова болить, але потім втягуєшся. І, як співала одна норвезька група, "Nar
+                            всіх спочатку голова болить, але потім втягуєшся. Ось, наприклад, послухайте:<br>
+                            <iframe style="border: 0; width: 100%; height: 120px; margin-top: 10px;"
+                                src="https://bandcamp.com/EmbeddedPlayer/album=2962508837/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/track=524081162/transparent=true/"
+                                seamless><a
+                                    href="https://nuclearwarnowproductions.bandcamp.com/album/the-oath-of-black-blood">The
+                                    Oath of Black Blood by Beherit</a></iframe> Звучить як білий шум зі звуками скаженого
+                            на фоні?
+                            А я оцінила на 8 з
+                            10. Я вже рік як щоденно це чую. Як співала одна норвезька група, "Nar
                             helvete engang kaller er det ingen vei tilbake" - "Коли пекло одного разу покличе, дороги
                             назад нема". Влучно!
                         </div>
@@ -228,6 +234,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
