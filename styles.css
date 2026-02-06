@@ -257,6 +257,26 @@ section a:hover {
     width: 100%;
 }
 
+.censored-cover {
+    filter: blur(2.5px);
+}
+
+.censored-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    color: red;
+    background-color: black;
+    font-size: 36px;
+    width: 18%;
+    height: 70px;
+    margin-top: 100px;
+    rotate: 45deg;
+    border: 2px solid red;
+}
+
 .favourite-album {
     display: flex;
     position: absolute;
