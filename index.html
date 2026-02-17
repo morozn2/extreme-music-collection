@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <button onclick="toggleBurgerMenu()" class="burger-symbol">☰</button>
+                <button class="burger-symbol">☰</button>
                 <a class="navbar-brand logo" href="index.html" style="margin-right: -150px;">MusiCollection</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -35,63 +36,63 @@
     </header>
 
     <section>
-        <div class="burgerMenu burgerMenuHidden" id="burgerMenu">
-            <div class="burgerMenuButtonContainer">
-                <div class="formatsMenu">
+        <div class="burger-menu">
+            <div class="burger-menu-button-container">
+                <div class="formats-menu">
                     <a href="all-cds-page-one.html">
-                        <p class="formatsMenuParagraph">Диски</p>
+                        <p>Диски</p>
                     </a>
-                    <button type="button" onclick="toggleCD()" id="arrowcd" class="burgerMenuMainButtons">↓</button>
+                    <span class="burger-menu-arrow">↓</span>
                 </div>
-                <div id="cd-genres" class="genres formatHidden">
+                <div class="genres">
                     <a href="black-metal-cds-page-one.html" class="genre"><button
-                            class="burgerMenuSecondaryButtons">Black Metal</button></a>
-                    <a href="death-metal-cds.html" class="genre"><button class="burgerMenuSecondaryButtons">Death
+                            class="burger-menu-secondary-buttons">Black Metal</button></a>
+                    <a href="death-metal-cds.html" class="genre"><button class="burger-menu-secondary-buttons">Death
                             Metal</button></a>
                     <a href="post-punk-cds.html" class="genre"><button
-                            class="burgerMenuSecondaryButtons">Post-Punk</button></a>
-                    <a href="noise-n-indus-cds.html" class="genre"><button class="burgerMenuSecondaryButtons">Noise &
+                            class="burger-menu-secondary-buttons">Post-Punk</button></a>
+                    <a href="noise-n-indus-cds.html" class="genre"><button class="burger-menu-secondary-buttons">Noise &
                             Industrial</button></a>
-                    <a href="ambient-new-age-cds.html" class="genre"><button class="burgerMenuSecondaryButtons">New Age
+                    <a href="ambient-new-age-cds.html" class="genre"><button class="burger-menu-secondary-buttons">New Age
                             / Easy Listening / Ambient</button></a>
                 </div>
             </div>
-            <div class="burgerMenuButtonContainer">
-                <div class="formatsMenu">
+            <div class="burger-menu-button-container">
+                <div class="formats-menu">
                     <a href="all-tapes-page-one.html">
                         <p>Касети</p>
                     </a>
-                    <button onclick="toggleCS()" class="burgerMenuMainButtons" id="arrowcs">↓</button>
+                    <span class="burger-menu-arrow">↓</span>
                 </div>
-                <div id="cs-genres" class="genres formatHidden">
-                    <a href="black-metal-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Black
+                <div class="genres">
+                    <a href="black-metal-tapes.html" class="genre"><button class="burger-menu-secondary-buttons">Black
                             Metal</button></a>
-                    <a href="thrash-metal-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Thrash
+                    <a href="thrash-metal-tapes.html" class="genre"><button class="burger-menu-secondary-buttons">Thrash
                             Metal</button></a>
-                    <a href="dungeon-synth-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Dungeon
+                    <a href="dungeon-synth-tapes.html" class="genre"><button class="burger-menu-secondary-buttons">Dungeon
                             Synth</button></a>
                 </div>
             </div>
-            <div class="burgerMenuButtonContainer">
-                <div class="formatsMenu">
+            <div class="burger-menu-button-container">
+                <div class="formats-menu">
                     <a href="all-vinyl.html">
                         <p>Платівки</p>
                     </a>
-                    <button onclick="toggleLP()" class="burgerMenuMainButtons" id="arrowlp">↓</button>
+                    <span class="burger-menu-arrow">↓</span>
                 </div>
-                <div id="lp-genres" class="genres formatHidden">
-                    <a href="black-metal-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Black
+                <div class="genres">
+                    <a href="black-metal-vinyl.html" class="genre"><button class="burger-menu-secondary-buttons">Black
                             Metal</button></a>
-                    <a href="death-metal-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Death
+                    <a href="death-metal-vinyl.html" class="genre"><button class="burger-menu-secondary-buttons">Death
                             Metal</button></a>
-                    <a href="dungeon-synth-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Dungeon
+                    <a href="dungeon-synth-vinyl.html" class="genre"><button class="burger-menu-secondary-buttons">Dungeon
                             Synth</button></a>
-                    <a href="noise-n-indus-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Noise &
+                    <a href="noise-n-indus-vinyl.html" class="genre"><button class="burger-menu-secondary-buttons">Noise &
                             Industrial</button></a>
                 </div>
             </div>
         </div>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade">
             <div class="carousel-inner carousel-color">
                 <div class="carousel-item active d-flex justify-content-center gap-5 align-items-center">
                     <img src="/img/gold-black-lp.jpg" class="d-block w-50" alt="...">
@@ -147,85 +148,73 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div> -->
         <div class="homepage-content">
-            <div class="homepage-text">
-                <h1 class="headers">Музика на фізичних носіях</h1>
-                <p>Ласкаво просимо на сайт, присвячений моїй (поки що)
-                    скромній колекції. Мало хто зараз платить гроші за музику, і тим паче за аналогові носії, тому у вас
-                    могли виникнути деякі питання. Справа я постаралася відповісти на найчастіші з них</p>
+            <div>
+                <div class="homepage-image-box">
+                    <h3 class="homepage-image-box-text">The light is dead here...</h3>
+                    <img src="img/tape-cross.png" alt="" class="homepage-image">
+                </div>
             </div>
-            <div class="accordion accordion-settings" id="accordionPanelsStayOpenExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
-                            Але ж є Spotify, там все безкоштовне!
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                        <div class="accordion-body accordion-font">
-                            Spotify-то є, та і не тільки він, а й весь Інтернет, і я теж слухаю 98% музики з ютуб або
-                            bandcamp, бо
-                            груп багато, а на
-                            всі альбоми грошей не напасешся. Проте
-                            стрімінгові сервіси платять музикантам буквально
-                            копійки, та й звук, як на мене, поганий, особливо після прослуховування якогось альбому на
-                            диску. Тому я
-                            вирішила обрати якість та грошову підтримку
-                            виконавців на користь доступності. Звук з cd ні з чим не зрівняти, тільки що з платівкою,
-                            але в мене їх небагато.
-                        </div>
-                    </div>
+            <div class="homepage-text">
+                <h1 class="headers">MusiCollection</h1>
+                <h2>Ласкаво просимо на сайт, присвячений моїй (поки що) скромній колекції.</h2>
+                <br>
+                <h2> Мало хто зараз платить гроші за музику, і тим паче за аналогові носії, тому у вас
+                    могли виникнути деякі питання. Знизу я постаралася відповісти на найчастіші з них</p>
+                </h2>
+            </div>
+            <h1 class="faq-header">ЧаПи</h1>
+            <div class="faq-container">
+                <button class="faq-question">
+                    Але ж є Spotify, там все безкоштовне!
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="faq-answer">
+                    Spotify-то є, та і не тільки він, а й весь Інтернет, і я теж слухаю 98% музики з ютуб або
+                    bandcamp, бо
+                    груп багато, а на
+                    всі альбоми грошей не напасешся. Проте
+                    стрімінгові сервіси платять музикантам буквально
+                    копійки, та й звук, як на мене, поганий, особливо після прослуховування якогось альбому на
+                    диску. Тому я
+                    вирішила обрати якість та грошову підтримку
+                    виконавців на користь доступності. Звук з cd ні з чим не зрівняти, тільки що з платівкою,
+                    але в мене їх небагато.
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            Хто взагалі зараз купує касети і нащо?
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                        <div class="accordion-body accordion-font">
-                            Або люди з СРСР під впливом ностальгії, або такі диваки як я :D. Не дивуйтесь, а то я
-                            взагалі
-                            дискети в продажу бачила. А причина - душевність
-                            звуку. Нестача високох
-                            частот магічно впливає на нього. І black metal звучить ще сиріше, ніж на цифрі, що дуже
-                            гарно. Якщо чесно, то з всіх одинадцяти касет, що в мене є, тільки одна нормально звучить в
-                            навушниках. Але мені все одно подобається, навіть якщо я вимушена слухати без них.
-                        </div>
-                    </div>
+                <button class="faq-question">
+                    Хто взагалі зараз купує касети і нащо?
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="faq-answer">
+                    Або люди з СРСР під впливом ностальгії, або такі диваки як я :D. Не дивуйтесь, а то я
+                    взагалі
+                    дискети в продажу бачила. А причина - душевність
+                    звуку. Нестача високох
+                    частот магічно впливає на нього. І black metal звучить ще сиріше, ніж на цифрі, що дуже
+                    гарно. Якщо чесно, то з всіх одинадцяти касет, що в мене є, тільки одна нормально звучить в
+                    навушниках. Але мені все одно подобається, навіть якщо я вимушена слухати без них.
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
-                            Як це можна слухати? Вони ж в піснях демонів викликають!!!
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                        <div class="accordion-body accordion-font">
-                            Різні є люди, але це заїзджений стереотип. Всі "сатаністи", с якими випала нагода
-                            поспілкуватися, виявилися дуже хорошими людьми. Один навіть подарував мені три своїх
-                            альбоми. Це все образ. Часто вони адекватніші за моїх однолітків.<br> А до музики звикаєш,
-                            правда. У
-                            всіх спочатку голова болить, але потім втягуєшся. Ось, наприклад, послухайте:<br>
-                            <iframe style="border: 0; width: 100%; height: 120px; margin-top: 10px;"
-                                src="https://bandcamp.com/EmbeddedPlayer/album=2962508837/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/track=524081162/transparent=true/"
-                                seamless><a
-                                    href="https://nuclearwarnowproductions.bandcamp.com/album/the-oath-of-black-blood">The
-                                    Oath of Black Blood by Beherit</a></iframe> Звучить як білий шум зі звуками скаженого
-                            на фоні?
-                            А я оцінила на 8 з
-                            10. Я вже рік як щоденно це чую. Як співала одна норвезька група, "Nar
-                            helvete engang kaller er det ingen vei tilbake" - "Коли пекло одного разу покличе, дороги
-                            назад нема". Влучно!
-                        </div>
-                    </div>
+                <button class="faq-question">
+                    Як це можна слухати? Вони ж в піснях демонів викликають!!!
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="faq-answer">
+                    Різні є люди, але це заїзджений стереотип. Всі "сатаністи", с якими випала нагода
+                    поспілкуватися, виявилися дуже хорошими людьми. Один навіть подарував мені три своїх
+                    альбоми. Це все образ. Часто вони адекватніші за моїх однолітків.<br> А до музики звикаєш,
+                    правда. У
+                    всіх спочатку голова болить, але потім втягуєшся. Ось, наприклад, послухайте:<br>
+                    <iframe style="border: 0; width: 100%; height: 120px; margin-top: 10px;"
+                        src="https://bandcamp.com/EmbeddedPlayer/album=2962508837/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/track=524081162/transparent=true/"
+                        seamless><a
+                            href="https://nuclearwarnowproductions.bandcamp.com/album/the-oath-of-black-blood">The
+                            Oath of Black Blood by Beherit</a></iframe> Звучить як білий шум зі звуками скаженого
+                    на фоні?
+                    А я оцінила на 8 з
+                    10. Я вже рік як щоденно це чую. Як співала одна норвезька група, "Nar
+                    helvete engang kaller er det ingen vei tilbake" - "Коли пекло одного разу покличе, дороги
+                    назад нема". Влучно!
                 </div>
             </div>
         </div>
@@ -236,6 +225,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -1,19 +1,26 @@
-function toggleBurgerMenu() {
-    let burgerMenu = document.getElementById("burgerMenu");
-    burgerMenu.classList.toggle("burgerMenuHidden");
+const lenis = new Lenis();
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
 }
 
-function toggleCD() {
-    let cdGenres = document.getElementById("cd-genres");
-    cdGenres.classList.toggle("formatHidden");
-}
+requestAnimationFrame(raf);
 
-function toggleCS() {
-    let csGenres = document.getElementById("cs-genres");
-    csGenres.classList.toggle("formatHidden");
-}
+$(document).ready(function () {
+    $(".faq-question").click(function () {
+        const currentAnswer = $(this).next(".faq-answer");
+        $(".faq-answer").not(currentAnswer).slideUp();
+        currentAnswer.stop(true, true).slideToggle();
+    });
 
-function toggleLP() {
-    let lpGenres = document.getElementById("lp-genres");
-    lpGenres.classList.toggle("formatHidden");
-}
+    $(".burger-symbol").click(function () {
+        $(".burger-menu").slideToggle();
+    });
+
+    $(".formats-menu").click(function () {
+        const format = $(this).next(".genres");
+        format.slideToggle(400);
+        $(".genres").not(format).slideUp();
+    });
+});

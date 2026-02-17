@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <button onclick="toggleBurgerMenu()" class="burger-symbol">☰</button>
+                <button class="burger-symbol">☰</button>
                 <a class="navbar-brand logo" href="index.html" style="margin-right: -150px;">MusiCollection</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -35,58 +36,58 @@
     </header>
 
     <section>
-        <div class="burgerMenu burgerMenuHidden" id="burgerMenu">
-            <div class="burgerMenuButtonContainer">
-                <div class="formatsMenu">
+        <div class="burger-menu">
+            <div class="burger-menu-button-container">
+                <div class="formats-menu">
                     <a href="all-cds-page-one.html">
-                        <p class="formatsMenuParagraph">Диски</p>
+                        <p>Диски</p>
                     </a>
-                    <button type="button" onclick="toggleCD()" id="arrowcd" class="burgerMenuMainButtons">↓</button>
+                    <span class="burger-menu-arrow">↓</span>
                 </div>
-                <div id="cd-genres" class="genres formatHidden">
+                <div class="genres">
                     <a href="black-metal-cds-page-one.html" class="genre"><button
-                            class="burgerMenuSecondaryButtons">Black Metal</button></a>
-                    <a href="death-metal-cds.html" class="genre"><button class="burgerMenuSecondaryButtons">Death
+                            class="burger-menu-secondary-buttons">Black Metal</button></a>
+                    <a href="death-metal-cds.html" class="genre"><button class="burger-menu-secondary-buttons">Death
                             Metal</button></a>
                     <a href="post-punk-cds.html" class="genre"><button
-                            class="burgerMenuSecondaryButtons">Post-Punk</button></a>
-                    <a href="noise-n-indus-cds.html" class="genre"><button class="burgerMenuSecondaryButtons">Noise &
+                            class="burger-menu-secondary-buttons">Post-Punk</button></a>
+                    <a href="noise-n-indus-cds.html" class="genre"><button class="burger-menu-secondary-buttons">Noise &
                             Industrial</button></a>
-                    <a href="ambient-new-age-cds.html" class="genre"><button class="burgerMenuSecondaryButtons">New Age
+                    <a href="ambient-new-age-cds.html" class="genre"><button class="burger-menu-secondary-buttons">New Age
                             / Easy Listening / Ambient</button></a>
                 </div>
             </div>
-            <div class="burgerMenuButtonContainer">
-                <div class="formatsMenu">
+            <div class="burger-menu-button-container">
+                <div class="formats-menu">
                     <a href="all-tapes-page-one.html">
                         <p>Касети</p>
                     </a>
-                    <button onclick="toggleCS()" class="burgerMenuMainButtons" id="arrowcs">↓</button>
+                    <span class="burger-menu-arrow">↓</span>
                 </div>
-                <div id="cs-genres" class="genres formatHidden">
-                    <a href="black-metal-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Black
+                <div class="genres">
+                    <a href="black-metal-tapes.html" class="genre"><button class="burger-menu-secondary-buttons">Black
                             Metal</button></a>
-                    <a href="thrash-metal-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Thrash
+                    <a href="thrash-metal-tapes.html" class="genre"><button class="burger-menu-secondary-buttons">Thrash
                             Metal</button></a>
-                    <a href="dungeon-synth-tapes.html" class="genre"><button class="burgerMenuSecondaryButtons">Dungeon
+                    <a href="dungeon-synth-tapes.html" class="genre"><button class="burger-menu-secondary-buttons">Dungeon
                             Synth</button></a>
                 </div>
             </div>
-            <div class="burgerMenuButtonContainer">
-                <div class="formatsMenu">
+            <div class="burger-menu-button-container">
+                <div class="formats-menu">
                     <a href="all-vinyl.html">
                         <p>Платівки</p>
                     </a>
-                    <button onclick="toggleLP()" class="burgerMenuMainButtons" id="arrowlp">↓</button>
+                    <span class="burger-menu-arrow">↓</span>
                 </div>
-                <div id="lp-genres" class="genres formatHidden">
-                    <a href="black-metal-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Black
+                <div class="genres">
+                    <a href="black-metal-vinyl.html" class="genre"><button class="burger-menu-secondary-buttons">Black
                             Metal</button></a>
-                    <a href="death-metal-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Death
+                    <a href="death-metal-vinyl.html" class="genre"><button class="burger-menu-secondary-buttons">Death
                             Metal</button></a>
-                    <a href="dungeon-synth-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Dungeon
+                    <a href="dungeon-synth-vinyl.html" class="genre"><button class="burger-menu-secondary-buttons">Dungeon
                             Synth</button></a>
-                    <a href="noise-n-indus-vinyl.html" class="genre"><button class="burgerMenuSecondaryButtons">Noise &
+                    <a href="noise-n-indus-vinyl.html" class="genre"><button class="burger-menu-secondary-buttons">Noise &
                             Industrial</button></a>
                 </div>
             </div>
@@ -250,6 +251,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="script.js"></script>
 </body>
 
